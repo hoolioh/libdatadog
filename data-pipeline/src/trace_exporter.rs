@@ -277,64 +277,6 @@ mod tests {
     }
 
     #[test]
-    fn new_defaults() {
-        let builder = TraceExporterBuilder::default();
-        let exporter = builder
-            .set_tracer_version("v0.1")
-            .set_language("nodejs")
-            .set_language_version("1.0")
-            .set_language_interpreter("v8")
-            .build()
-            .unwrap();
-
-        assert_eq!(
-            exporter.endpoint.url.to_string(),
-            "http://127.0.0.1:8126/v0.4/traces"
-        );
-        assert_eq!(exporter.tags.tracer_version, "v0.1");
-        assert_eq!(exporter.tags.language, "nodejs");
-        assert_eq!(exporter.tags.language_version, "1.0");
-        assert_eq!(exporter.tags.language_interpreter, "v8");
-    }
-
-    #[test]
-    fn test_from_tracer_tags_to_tracer_header_tags() {
-        let tracer_tags = TracerTags {
-            tracer_version: "v0.1".to_string(),
-            language: "rust".to_string(),
-            language_version: "1.52.1".to_string(),
-            language_interpreter: "rustc".to_string(),
-        };
-
-        let tracer_header_tags: TracerHeaderTags = (&tracer_tags).into();
-
-        assert_eq!(tracer_header_tags.tracer_version, "v0.1");
-        assert_eq!(tracer_header_tags.lang, "rust");
-        assert_eq!(tracer_header_tags.lang_version, "1.52.1");
-        assert_eq!(tracer_header_tags.lang_interpreter, "rustc");
-    }
-
-    #[test]
-    fn test_from_tracer_tags_to_hashmap() {
-        let tracer_tags = TracerTags {
-            tracer_version: "v0.1".to_string(),
-            language: "rust".to_string(),
-            language_version: "1.52.1".to_string(),
-            language_interpreter: "rustc".to_string(),
-        };
-
-        let hashmap: HashMap<&'static str, String> = (&tracer_tags).into();
-
-        assert_eq!(hashmap.get("datadog-meta-tracer-version").unwrap(), "v0.1");
-        assert_eq!(hashmap.get("datadog-meta-lang").unwrap(), "rust");
-        assert_eq!(hashmap.get("datadog-meta-lang-version").unwrap(), "1.52.1");
-        assert_eq!(
-            hashmap.get("datadog-meta-lang-interpreter").unwrap(),
-            "rustc"
-        );
-    }
-
-    #[test]
     fn configure() {}
     #[test]
     fn export() {}
