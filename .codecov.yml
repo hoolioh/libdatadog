@@ -11,18 +11,20 @@ component_management:
       name: data-pipeline  # this is a display name, and can be changed freely
       paths:
         - data-pipeline
-    - component_id: data-pipeline-ffi  # this is an identifier that should not be changed
-      name: data-pipeline-ffi  # this is a display name, and can be changed freely
-      paths:
         - data-pipeline-ffi
+    # - component_id: data-pipeline-ffi  # this is an identifier that should not be changed
+    #   name: data-pipeline-ffi  # this is a display name, and can be changed freely
+    #   paths:
+    #     - data-pipeline-ffi
     - component_id: ddcommon  # this is an identifier that should not be changed
       name: ddcommon  # this is a display name, and can be changed freely
       paths:
         - ddcommon
-    - component_id: ddcommon-ffi  # this is an identifier that should not be changed
-      name: ddcommon-ffi  # this is a display name, and can be changed freely
-      paths:
         - ddcommon-ffi
+    # - component_id: ddcommon-ffi  # this is an identifier that should not be changed
+    #   name: ddcommon-ffi  # this is a display name, and can be changed freely
+    #   paths:
+    #     - ddcommon-ffi
     - component_id: ddtelemetry  # this is an identifier that should not be changed
       name: ddtelemetry  # this is a display name, and can be changed freely
       paths:
@@ -35,10 +37,11 @@ component_management:
       name: profiling  # this is a display name, and can be changed freely
       paths:
         - profiling
-    - component_id: profiling-ffi  # this is an identifier that should not be changed
-      name: profiling-ffi  # this is a display name, and can be changed freely
-      paths:
         - profiling-ffi
+    # - component_id: profiling-ffi  # this is an identifier that should not be changed
+    #   name: profiling-ffi  # this is a display name, and can be changed freely
+    #   paths:
+    #     - profiling-ffi
     - component_id: serverless  # this is an identifier that should not be changed
       name: serverless  # this is a display name, and can be changed freely
       paths:
@@ -47,10 +50,11 @@ component_management:
       name: sidecar  # this is a display name, and can be changed freely
       paths:
         - sidecar
-    - component_id: sidecar-ffi  # this is an identifier that should not be changed
-      name: sidecar-ffi  # this is a display name, and can be changed freely
-      paths:
         - sidecar-ffi
+    # - component_id: sidecar-ffi  # this is an identifier that should not be changed
+    #   name: sidecar-ffi  # this is a display name, and can be changed freely
+    #   paths:
+    #     - sidecar-ffi
     - component_id: spawn-worker  # this is an identifier that should not be changed
       name: spawn-worker  # this is a display name, and can be changed freely
       paths:
