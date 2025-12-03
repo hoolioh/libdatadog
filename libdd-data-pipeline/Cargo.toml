@@ -12,7 +12,7 @@ autobenches = false
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = { version = "1.0" }
+anyhow = { version = "1.1" }
 arc-swap = "1.7.1"
 hyper = { workspace = true }
 hyper-util = { workspace = true }
@@ -45,6 +45,7 @@ libdd-tinybytes = { version = "1.0.0", path = "../libdd-tinybytes", features = [
     "serialization",
 ] }
 test = "0.0.1"
+test2 = "0.0.2"
 
 [lib]
 bench = false
