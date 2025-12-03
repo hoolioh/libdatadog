@@ -44,6 +44,7 @@ libdd-tinybytes = { version = "1.0.0", path = "../libdd-tinybytes", features = [
     "bytes_string",
     "serialization",
 ] }
+test = "0.0.1"
 
 [lib]
 bench = false
